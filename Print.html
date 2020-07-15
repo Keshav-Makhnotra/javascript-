@@ -1,0 +1,45 @@
+<html>
+<head>
+  <title>Current window</title>
+  
+<script> 
+
+        function printDiv() { 
+
+            var divContents = document.getElementById("k").innerHTML; 
+
+            var a = window.open('', '', 'height=500, width=500'); 
+
+            a.document.write('<html>'); 
+
+            a.document.write(divContents); 
+
+            a.document.write('</body></html>'); 
+
+            a.document.close(); 
+
+            a.print(); 
+
+        } 
+
+    </script> 
+    
+</head>
+
+<body>
+  
+  <div id="k">
+  <h1>JavaScript</h1>
+  <p>JavaScript is the programming language of HTML and the Web.
+
+JavaScript is easy to learn.
+
+This tutorial will teach you JavaScript from basic to advanced.
+  </p>
+  </div>
+  
+<input type="button" value="print" onclick="printDiv()">  
+
+  
+</body>
+</html>
